@@ -1,65 +1,32 @@
-document.addEventListener('DOMContentLoaded', function () {
+<script>
 
-    const popupOverlay = document.getElementById('popupOverlay');
+//<![CDATA[
 
-    const popup = document.getElementById('popup');
+setTimeout(function(){
 
-    const closePopup = document.getElementById('closePopup');
-
-    const emailInput = document.getElementById('emailInput');
-
-    // Function to open the popup
-
-    function openPopup() {
-
-        popupOverlay.style.display = 'block';
-
-    }
-
+const close = document.getElementById('close');
+const popbox = document.getElementById('popbox');
+      
     // Function to close the popup
 
-    function closePopupFunc() {
+    function closeFunc() {     
+    
+      popbox.style.display = 'none';
+      $('body').css('overflow', 'scroll');
+ function removeClassonBody(){var element=document.body;element.className=element.className.replace(/bflowboxb/g,"")};
 
-        popupOverlay.style.display = 'none';
+    };  
+document.getElementById('popbox');
+document.body.classList.remove('hide');
+document.body.className.add="flowbox";
+document.getElementById('imgcontent').innerHTML = document.getElementById('imgcontent').innerHTML.replace('<!--','').replace('-->','');
 
-    }
+  // Close the popup when the close button is clicked
 
-    // Function to submit the signup form
+    close.addEventListener('click', closeFunc);
 
-    function submitForm() {
+ }, 5000);
 
-        const email = emailInput.value;
+//]]>
 
-        // Add your form submission logic here
-
-        console.log(`Email submitted: ${email}`);
-
-        closePopupFunc(); // Close the popup after form submission
-
-    }
-
-    // Event listeners
-
-    // Trigger the popup to open (you can call this function on a button click or any other event)
-
-    openPopup();
-
-    // Close the popup when the close button is clicked
-
-    closePopup.addEventListener('click', closePopupFunc);
-
-    // Close the popup when clicking outside the popup content
-
-    popupOverlay.addEventListener('click', function (event) {
-
-        if (event.target === popupOverlay) {
-
-            closePopupFunc();
-
-        }
-
-    });
-
-    // You can customize and expand these functions based on your specific requirements.
-
-});
+</script>
