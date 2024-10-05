@@ -1,7 +1,3 @@
-<script>
-
-//<![CDATA[
-
 setTimeout(function(){
 
 const close = document.getElementById('close');
@@ -26,7 +22,3 @@ document.getElementById('imgcontent').innerHTML = document.getElementById('imgco
     close.addEventListener('click', closeFunc);
 
  }, 5000);
-
-//]]>
-
-</script>
