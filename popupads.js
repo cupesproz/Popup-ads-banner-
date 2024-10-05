@@ -12,8 +12,7 @@ const popbox = document.getElementById('popbox');
  function removeClassonBody(){var element=document.body;element.className=element.className.replace(/bflowboxb/g,"")};
 
     };  
-document.getElementById('popbox');
-document.body.classList.remove('hide');
+document.getElementById('popbox').classList.remove('hide');
 document.body.className.add="flowbox";
 document.getElementById('imgcontent').innerHTML = document.getElementById('imgcontent').innerHTML.replace('<!--','').replace('-->','');
 
